@@ -1,4 +1,4 @@
-'''
+"""
 motocyles = ['honda', 'java', 'kawasaki', 'harley', 'ducati']
 motocyles.append('suzuki') #добавил мотоцикл suzuki в конец списка
 print(motocyles)
@@ -17,6 +17,34 @@ too_expensive = 'ducati'
 motocyles.remove(too_expensive) #удалил мотоцикл Ducati
 print(motocyles)
 print(f"A {too_expensive.title()} is too expensive for me.")
+
+#-----
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("Here is the original list:")
+print(cars)
+cars.sort() # отсортировано в алфавитном порядке
+print(cars)
+cars.sort(reverse=True) # отсортировано в обратном алфавитном порядке
+print(cars)
+print("----")
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("Here is the original list:")
+print(cars)
+print("\nHere is sorted list:")
+print(sorted(cars)) # временная сортировка на момент вывода на экран
+print("----")
+print(cars)
+cars.reverse() # сортировка в обратном порядке
+print(cars)
+#-----
+
+# 3.1
+names = ['alex', 'bob', 'kristina', 'thomas']
+print(names[0].title())
+print(names[1].title())
+print(names[2].title())
+print(names[3].title())
+print(f"My first frend is {names[0].title()}")
 
 # 3.4
 guests = ['alice', 'robert', 'chistian', 'alex'] # формируем список гостей
@@ -50,24 +78,6 @@ for i in range(j):
 del guests[0]
 print(guests)
 
-cars = ['bmw', 'audi', 'toyota', 'subaru']
-print("Here is the original list:")
-print(cars)
-cars.sort() # отсортировано в алфавитном порядке
-print(cars)
-cars.sort(reverse=True) # отсортировано в обратном алфавитном порядке
-print(cars)
-print("----")
-cars = ['bmw', 'audi', 'toyota', 'subaru']
-print("Here is the original list:")
-print(cars)
-print("\nHere is sorted list:")
-print(sorted(cars)) # временная сортировка на момент вывода на экран
-print("----")
-print(cars)
-cars.reverse() # сортировка в обратном порядке
-print(cars)
-
 # 3.8
 countries = ['Holland', 'Bulgaria', 'Mexico', 'Nicaragua', 'China', 'India']
 print("Initial order")
@@ -98,11 +108,14 @@ print('---')
 countries.sort(reverse=True)
 print("'.sort(reverse=True)' reverse alphabetical sort method")
 print(countries)
-'''
+
 
 # 3.9
-guests = ['alice', 'robert', 'chistian', 'alex'] # формируем список гостей
-for i in range(len(guests)): # шлем приглашения гостям в цикле
+guests = ['alice', 'robert', 'chistian', 'alex']  # формируем список гостей
+for i in range(len(guests)):  # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 
 print(f"{len(guests)} guests were invited to dinner")
+
+
+"""
