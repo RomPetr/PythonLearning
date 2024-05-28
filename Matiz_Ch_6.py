@@ -49,7 +49,7 @@ print(f"The last name is {human_0['last_name'].title()}")
 print(f"His age is {human_0['age']}.")
 print(f"And he lives in {human_0['city']}.")
 #--------------------------------------
-"""
+
 # HW 6.3
 gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
              'repo': 'Репозиторий — хранилище данных, которое можно сравнить с каталогом информации.',
@@ -68,3 +68,56 @@ print("Open Source:")
 print(f"{gollosary['open_source']}\n")
 print("Глубокое машинное обучение:")
 print(f"{gollosary['deep_learning']}\n")
+#--------------------------------------
+# Перебор словваря
+user_0 = {
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi'
+    }
+for key, value in user_0.items():
+    print(f"\nKey: {key}")
+    print(f"Value: {value}")
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+friends = ['phil', 'sarah']
+
+# for name, language in favorite_languages.items():
+#     print(f"{name.title()}'s favorite language is {language.title()}.")
+for name in favorite_languages.keys():
+    print(f"Hi, {name.title()}.")
+    if name in friends:
+        language = favorite_languages[name].title()
+        print(f"\t{name.title()}, I see you love {language}!")
+
+# Извлечение только неповторяющихся значений из словаря
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'corey': 'ruby',
+    'phil': 'python',
+    }
+print("The following languages have bee mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+#--------------------------------------
+"""
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+    }
+for name, languages in favorite_languages.items():
+    if len(languages) < 2:
+        print(f"\n{name.title()}'s favorite language are:")
+    else:
+        print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
