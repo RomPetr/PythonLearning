@@ -17,7 +17,7 @@ alien_0 = {'color': 'green'}
 print(f"The alien is {alien_0['color']}.")
 alien_0['color'] = 'yellow'
 print(f"The alien is now {alien_0['color']}."
-'''
+
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
 print(f"Original position: {alien_0['x_position']}")
 # Пришелец перемещается вправо
@@ -32,3 +32,19 @@ else:
 # Новая позиция равна сумме старой позиции и приращивания
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print(f"New position: {alien_0['x_position']}")
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'No points value assigned.')
+print(point_value)
+'''
+# HW 6.1
+human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
+print(f"The first name of this human is {human_0['first_name'].title()}.")
+print(f"The last name is {human_0['last_name'].title()}")
+print(f"His age is {human_0['age']}.")
+print(f"And he lives in {human_0['city']}.")
