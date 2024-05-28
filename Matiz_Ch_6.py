@@ -121,7 +121,7 @@ for name, languages in favorite_languages.items():
         print(f"\n{name.title()}'s favorite languages are:")
     for language in languages:
         print(f"\t{language.title()}")
-"""
+
 #--------------------------------------
 # HW 6.4
 gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
@@ -134,3 +134,14 @@ gollosary = {'concatination': 'Конкатенация строк — это о
 for key, val in gollosary.items():
     print(f"\n{key.title()}:")
     print(f"\t{val}")
+#--------------------------------------
+# HW 6.5
+rivers_1 = {'nile': 'egypt', 'angara': 'russia', 'senna': 'france'}
+# for key, value in rivers_1.items():
+#     print(f"\nThe {key.title()} runs through {value.title()}.")
+# for key in rivers_1.keys():
+#     print(key.title())
+for value in rivers_1.values():
+    print(value.title())
+#--------------------------------------
+"""
