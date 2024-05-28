@@ -107,7 +107,7 @@ print("The following languages have bee mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
 #--------------------------------------
-"""
+
 favorite_languages = {
     'jen': ['python', 'ruby'],
     'sarah': ['c'],
@@ -121,3 +121,16 @@ for name, languages in favorite_languages.items():
         print(f"\n{name.title()}'s favorite languages are:")
     for language in languages:
         print(f"\t{language.title()}")
+"""
+#--------------------------------------
+# HW 6.4
+gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
+             'repo': 'Репозиторий — хранилище данных, которое можно сравнить с каталогом информации.',
+             'framework': 'Фреймворк — программная платформа, которая упрощает разработку.',
+             'open_source': 'Open Source — программное обеспечение с открытым исходным кодом.',
+             'deep_learning': 'Deep learning — глубокое машинное обучение. Это вид вид машинного обучения, при котором'
+                              ' многослойные нейросети самостоятельно обучаются на больших массивах данных.',
+             }
+for key, val in gollosary.items():
+    print(f"\n{key.title()}:")
+    print(f"\t{val}")
