@@ -12,8 +12,16 @@ user = 'marie'
 
 if user not in banned_users:
     print(f"{user.title()}, you can post a response if you wish.")
-# --------------------------------
-# 5.1
+# -------------------------------------
+
+requested_toppings = ['mushrooms', 'onions', 'pineapple']
+if 'mushrooms' in requested_toppings:
+    print('YES')
+else:
+    print('NO')
+# -------------------------------------
+'''
+# HW 5.1
 car = 'subaru'
 print("Is car == 'subaru'? I predict True.")
 print(car == 'subaru')
@@ -25,4 +33,4 @@ print("\nIs 2+3 == 5?")
 print(2 + 3 == 5)
 print("\nIs 5+6 > 7+7?")
 print(5+6 > 7+7 )
-"""
+'''
