@@ -79,6 +79,7 @@ for key, value in user_0.items():
     print(f"\nKey: {key}")
     print(f"Value: {value}")
 
+#--------------------------------------
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -106,6 +107,7 @@ favorite_languages = {
 print("The following languages have bee mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
+
 #--------------------------------------
 
 favorite_languages = {
