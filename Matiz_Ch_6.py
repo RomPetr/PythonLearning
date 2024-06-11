@@ -147,6 +147,16 @@ for value in rivers_1.values():
     print(value.title())
 #--------------------------------------
 """
+
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+    print(alien)
+
+"""
 # Создание пустого списка для хранения пришельцев
 aliens = []
 # Создание 30ти зеленых пришельцев
@@ -168,3 +178,4 @@ print("...")
 
 # Вывод количества созданных пришельцев
 print(f"Total number of aliens: {len(aliens)}.")
+"""
