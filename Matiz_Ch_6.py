@@ -146,8 +146,8 @@ rivers_1 = {'nile': 'egypt', 'angara': 'russia', 'senna': 'france'}
 for value in rivers_1.values():
     print(value.title())
 #--------------------------------------
-"""
 
+# Список словарей
 alien_0 = {'color': 'green', 'points': 5}
 alien_1 = {'color': 'yellow', 'points': 10}
 alien_2 = {'color': 'red', 'points': 15}
@@ -156,7 +156,6 @@ aliens = [alien_0, alien_1, alien_2]
 for alien in aliens:
     print(alien)
 
-"""
 # Создание пустого списка для хранения пришельцев
 aliens = []
 # Создание 30ти зеленых пришельцев
@@ -178,4 +177,30 @@ print("...")
 
 # Вывод количества созданных пришельцев
 print(f"Total number of aliens: {len(aliens)}.")
+
+# Список в словаре
+# Сохранение информации о заказанной пицце
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+    }
+# Описание заказа
+print(f"You ordered a {pizza['crust']}-crust pizza "
+      "with following toppings:")
+for topping in pizza['toppings']:
+    print("\t" + topping)
 """
+# Любимые языки программирования
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+    }
+for name, languages in favorite_languages.items():
+    if len(languages) < 2:
+        print(f"\n{name.title()}'s favorite language are:")
+    else:
+        print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
