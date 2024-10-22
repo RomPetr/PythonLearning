@@ -13,11 +13,15 @@ print(motocyles)
 popped_motorcycle = motocyles.pop(0) #удалил мотоцикл Upiter
 print(motocyles)
 print(f"Deleted the {popped_motorcycle.title()}.")
+last_owned = motocyles.pop()
+print(f"The last motorcycle I owned was a {last_owned.title()}")
 too_expensive = 'ducati'
 motocyles.remove(too_expensive) #удалил мотоцикл Ducati
 print(motocyles)
 print(f"A {too_expensive.title()} is too expensive for me.")
+"""
 
+"""
 #-----
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print("Here is the original list:")
@@ -36,8 +40,10 @@ print("----")
 print(cars)
 cars.reverse() # сортировка в обратном порядке
 print(cars)
-#-----
+"""
 
+"""
+#-----
 # 3.1
 names = ['alex', 'bob', 'kristina', 'thomas']
 print(names[0].title())
@@ -45,12 +51,23 @@ print(names[1].title())
 print(names[2].title())
 print(names[3].title())
 print(f"My first frend is {names[0].title()}")
+"""
 
+"""
+# 3.3
+motorcycles = ['honda', 'java', 'kawasaki', 'harley', 'ducati', 'triumph']
+print(f"I'd like to bye the {motorcycles[3].title()} motorcycle.")
+"""
+
+"""
 # 3.4
 guests = ['alice', 'robert', 'chistian', 'alex'] # формируем список гостей
 for i in range(len(guests)): # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
+"""
+
+"""
 # 3.5
 popped = guests.pop(3) # убрали из списка гостя по имени Алекс
 print(f"Guest {popped.title()} is not will come")
@@ -59,6 +76,9 @@ print(f"Guest {guests[-1].title()} is will come instead {popped.title()}")
 for i in range(len(guests)):
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
+"""
+
+"""
 # 3.6
 guests.insert(0, 'shon') #добавили гостя по имени Шон в начало списка
 print(f"Also {guests[0].title()} is will come")
@@ -67,6 +87,9 @@ print(f"Also {guests[3].title()} is will come too")
 for i in range(len(guests)): # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
+"""
+
+"""
 # 3.7
 for i in range(4):
     deleted = guests.pop()
@@ -77,7 +100,9 @@ for i in range(j):
     print(f"{i}")
 del guests[0]
 print(guests)
+"""
 
+"""
 # 3.8
 countries = ['Holland', 'Bulgaria', 'Mexico', 'Nicaragua', 'China', 'India']
 print("Initial order")
@@ -108,14 +133,13 @@ print('---')
 countries.sort(reverse=True)
 print("'.sort(reverse=True)' reverse alphabetical sort method")
 print(countries)
+"""
 
-
+"""
 # 3.9
 guests = ['alice', 'robert', 'chistian', 'alex']  # формируем список гостей
 for i in range(len(guests)):  # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 
 print(f"{len(guests)} guests were invited to dinner")
-
-
 """

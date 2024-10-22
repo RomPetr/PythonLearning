@@ -190,6 +190,8 @@ print(f"You ordered a {pizza['crust']}-crust pizza "
 for topping in pizza['toppings']:
     print("\t" + topping)
 """
+
+"""
 # Любимые языки программирования
 favorite_languages = {
     'jen': ['python', 'ruby'],
@@ -201,6 +203,7 @@ for name, languages in favorite_languages.items():
     if len(languages) < 2:
         print(f"\n{name.title()}'s favorite language are:")
     else:
-        print(f"\n{name.title()}'s favorite languages are:")
+        print(f"\n{name.title()}'s favorite languages are:")adde
     for language in languages:
         print(f"\t{language.title()}")
+"""
