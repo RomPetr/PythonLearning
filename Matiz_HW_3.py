@@ -21,7 +21,7 @@ print(motocyles)
 print(f"A {too_expensive.title()} is too expensive for me.")
 """
 
-"""
+'''
 #-----
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print("Here is the original list:")
@@ -35,12 +35,17 @@ cars = ['bmw', 'audi', 'toyota', 'subaru']
 print("Here is the original list:")
 print(cars)
 print("\nHere is sorted list:")
+print("------sorted()--------")
 print(sorted(cars)) # временная сортировка на момент вывода на экран
-print("----")
+print(("---sorted(cars, reverse=True)---"))
+print(sorted(cars, reverse=True)) #  временная сортировака в обратном алф. порядке
+print("------original list----------")
 print(cars)
 cars.reverse() # сортировка в обратном порядке
+print("------reverse()--------")
 print(cars)
-"""
+print(f"Количество автомобилей в списке: {len(cars)}")
+'''
 
 """
 #-----
@@ -59,15 +64,14 @@ motorcycles = ['honda', 'java', 'kawasaki', 'harley', 'ducati', 'triumph']
 print(f"I'd like to bye the {motorcycles[3].title()} motorcycle.")
 """
 
-"""
+'''
 # 3.4
 guests = ['alice', 'robert', 'chistian', 'alex'] # формируем список гостей
 for i in range(len(guests)): # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
-"""
 
-"""
+
 # 3.5
 popped = guests.pop(3) # убрали из списка гостя по имени Алекс
 print(f"Guest {popped.title()} is not will come")
@@ -76,9 +80,8 @@ print(f"Guest {guests[-1].title()} is will come instead {popped.title()}")
 for i in range(len(guests)):
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
-"""
 
-"""
+
 # 3.6
 guests.insert(0, 'shon') #добавили гостя по имени Шон в начало списка
 print(f"Also {guests[0].title()} is will come")
@@ -87,7 +90,7 @@ print(f"Also {guests[3].title()} is will come too")
 for i in range(len(guests)): # шлем приглашения гостям в цикле
     print(f"Dear, {guests[i].title()}. I'm waiting for you for dinner on October 12 at 19-00")
 print("----")
-"""
+'''
 
 """
 # 3.7
@@ -102,7 +105,7 @@ del guests[0]
 print(guests)
 """
 
-"""
+'''
 # 3.8
 countries = ['Holland', 'Bulgaria', 'Mexico', 'Nicaragua', 'China', 'India']
 print("Initial order")
@@ -133,7 +136,7 @@ print('---')
 countries.sort(reverse=True)
 print("'.sort(reverse=True)' reverse alphabetical sort method")
 print(countries)
-"""
+'''
 
 """
 # 3.9
