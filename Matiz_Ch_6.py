@@ -203,7 +203,52 @@ for name, languages in favorite_languages.items():
     if len(languages) < 2:
         print(f"\n{name.title()}'s favorite language are:")
     else:
-        print(f"\n{name.title()}'s favorite languages are:")adde
+        print(f"\n{name.title()}'s favorite languages are:")
     for language in languages:
         print(f"\t{language.title()}")
 """
+
+"""
+# Словарь в словаре
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princenton',
+        },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        },
+    }
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first']} {user_info['last']}"
+    location = user_info['location']
+    print(f"\tFull name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
+"""
+
+"""
+# HW 6.1
+human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
+print(f"The first name of this human is {human_0['first_name'].title()}.")
+print(f"The last name is {human_0['last_name'].title()}")
+print(f"His age is {human_0['age']}.")
+print(f"And he lives in {human_0['city']}.")
+"""
+
+# HW 6.7
+human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
+human_1 = {'first_name': 'bob', 'last_name': 'wilkins', 'age': 35, 'city': 'new york'}
+human_2 = {'first_name': 'christina', 'last_name': 'storn', 'age': 22, 'city': 'huston'}
+
+people = [human_0, human_1, human_2]
+for i, human in enumerate(people):
+    print(i+1)
+    for key, val in human.items():
+        full_name = f"{val['first_name']} {val['last_name']}"
+        print(f"\nFull name: {full_name}")
+        # print(f"{k}: {v.title()}")
+
