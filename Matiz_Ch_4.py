@@ -1,3 +1,4 @@
+
 """
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
@@ -34,11 +35,20 @@ print(f"Сумма чисел в списке: {sum(digits)}")
 #------------------------------------------------
 """
 
-'''
+"""
 # генераторы списков
-squares = [value**2 for value in range(1,11)]
-print(squares)
+# генератор списка квадратов числа
+squares = [value**2 for value in range(1, 11)]
+print(f"Квадраты чисел {[n for n in range(1, 11)]} равны {squares}")
+"""
+
 '''
+# генератор кубических корней с точностью три знака после запятой
+nums = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+nums1 = [round(num ** (1 / 3), 3) for num in nums]
+print(nums1)
+'''
+
 
 """
 # сегменты в списках
@@ -50,6 +60,8 @@ print("Here are the first three players on my team:")
 for player in players[:3]:
     print(player.title())
 """
+
+"""
 # копирование списка через сегмент
 my_foods = ['pizza', 'falafel', 'carrot cake']
 friend_foods = my_foods[:]
@@ -60,12 +72,14 @@ print("My favorite foods are:")
 print(my_foods)
 print("\nMy friend's favorite foods are:")
 print(friend_foods)
+"""
+
 
 """
 # 4.1
-pizzes = ['Margherita', 'Pepperoni', 'Hawaiian', 'BBQ Chicken', 'Four Cheese']
+pizzas = ['Margherita', 'Pepperoni', 'Hawaiian', 'BBQ Chicken', 'Four Cheese']
 
-for pizza in pizzes:
+for pizza in pizzas:
     print(f"I like {pizza}")
 print("I really love pizza!")
 """
@@ -87,6 +101,12 @@ print(sum(nums))
 """
 # 4.6 вывод нечетных чисел от 1 до 20
 nums = [val for val in range(1,20,2)]
+print(nums)
+"""
+
+"""
+# 4.7 вывод чисел, кратных 3 в диапазоне от 3 до 30
+nums = [val for val in range(3,31,3)]
 print(nums)
 """
 
