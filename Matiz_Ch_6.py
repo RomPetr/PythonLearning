@@ -1,25 +1,31 @@
 """
-alien_0 = {'color': 'green', 'points': 5}
-print(alien_0['color'])
-print(alien_0['points'])
-# new_points = alien_0['points']
-# print(f"You just earned {new_points} points!")
-alien_0['x_position'] = 0
-alien_0['y_position'] = 25
-print(alien_0)
-
 alien_0 = {}
 alien_0['color'] = 'green'
 alien_0['points'] = 5
 print(alien_0)
+"""
 
+"""
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+print(alien_0['points'])
+new_points = alien_0['points']
+print(f"You just earned {new_points} points!")
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+"""
+
+"""
 alien_0 = {'color': 'green'}
 print(f"The alien is {alien_0['color']}.")
 alien_0['color'] = 'yellow'
-print(f"The alien is now {alien_0['color']}."
+print(f"The alien is now {alien_0['color']}.")
+"""
 
+"""
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
-print(f"Original position: {alien_0['x_position']}")
+print(f"Original x position: {alien_0['x_position']}")
 # Пришелец перемещается вправо
 if alien_0['speed'] == 'slow':
     x_increment = 1
@@ -28,28 +34,45 @@ elif alien_0['speed'] == 'medium':
 else:
     # Пришелец двигается быстро
     x_increment = 3
-
 # Новая позиция равна сумме старой позиции и приращивания
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print(f"New position: {alien_0['x_position']}")
+"""
 
+"""
 alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
-del alien_0['points']
+for k in alien_0.keys():
+    key = k
+    # print(key)
+point = alien_0.pop('points')
+print(f"Popped key is '{key}' == {point}")
+# del alien_0['points']
 print(alien_0)
 
+# использование метода get() если нет искомого ключа в словаре
 alien_0 = {'color': 'green', 'speed': 'slow'}
 point_value = alien_0.get('points', 'No points value assigned.')
 print(point_value)
-#--------------------------------------
+"""
+# --------------------------------------
+"""
 # HW 6.1
 human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
 print(f"The first name of this human is {human_0['first_name'].title()}.")
 print(f"The last name is {human_0['last_name'].title()}")
 print(f"His age is {human_0['age']}.")
 print(f"And he lives in {human_0['city']}.")
-#--------------------------------------
-
+"""
+# --------------------------------------
+"""
+# HW 6.2
+friends = {'alex': 6, 'martin': 8, 'regina': 12, 'phill': 5, 'antony': 3}
+for key, value in friends.items():
+   print(f"My friend {key.title()} likes the number {value}")
+"""
+# --------------------------------------
+"""
 # HW 6.3
 gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
              'repo': 'Репозиторий — хранилище данных, которое можно сравнить с каталогом информации.',
@@ -68,7 +91,9 @@ print("Open Source:")
 print(f"{gollosary['open_source']}\n")
 print("Глубокое машинное обучение:")
 print(f"{gollosary['deep_learning']}\n")
-#--------------------------------------
+"""
+# --------------------------------------
+"""
 # Перебор словваря
 user_0 = {
     'username': 'efermi',
@@ -78,8 +103,9 @@ user_0 = {
 for key, value in user_0.items():
     print(f"\nKey: {key}")
     print(f"Value: {value}")
-
-#--------------------------------------
+"""
+# --------------------------------------
+"""
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -95,7 +121,9 @@ for name in favorite_languages.keys():
     if name in friends:
         language = favorite_languages[name].title()
         print(f"\t{name.title()}, I see you love {language}!")
+"""
 
+"""
 # Извлечение только неповторяющихся значений из словаря
 favorite_languages = {
     'jen': 'python',
@@ -107,7 +135,7 @@ favorite_languages = {
 print("The following languages have bee mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
-
+"""
 #--------------------------------------
 
 favorite_languages = {
@@ -125,6 +153,7 @@ for name, languages in favorite_languages.items():
         print(f"\t{language.title()}")
 
 #--------------------------------------
+"""
 # HW 6.4
 gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
              'repo': 'Репозиторий — хранилище данных, которое можно сравнить с каталогом информации.',
@@ -136,7 +165,9 @@ gollosary = {'concatination': 'Конкатенация строк — это о
 for key, val in gollosary.items():
     print(f"\n{key.title()}:")
     print(f"\t{val}")
-#--------------------------------------
+"""
+# --------------------------------------
+"""
 # HW 6.5
 rivers_1 = {'nile': 'egypt', 'angara': 'russia', 'senna': 'france'}
 # for key, value in rivers_1.items():
@@ -145,8 +176,9 @@ rivers_1 = {'nile': 'egypt', 'angara': 'russia', 'senna': 'france'}
 #     print(key.title())
 for value in rivers_1.values():
     print(value.title())
-#--------------------------------------
-
+"""
+# --------------------------------------
+"""
 # Список словарей
 alien_0 = {'color': 'green', 'points': 5}
 alien_1 = {'color': 'yellow', 'points': 10}
@@ -155,7 +187,9 @@ aliens = [alien_0, alien_1, alien_2]
 
 for alien in aliens:
     print(alien)
-
+"""
+# --------------------------------------
+"""
 # Создание пустого списка для хранения пришельцев
 aliens = []
 # Создание 30ти зеленых пришельцев
@@ -177,7 +211,9 @@ print("...")
 
 # Вывод количества созданных пришельцев
 print(f"Total number of aliens: {len(aliens)}.")
-
+"""
+#--------------------------------------
+"""
 # Список в словаре
 # Сохранение информации о заказанной пицце
 pizza = {
@@ -239,16 +275,17 @@ print(f"His age is {human_0['age']}.")
 print(f"And he lives in {human_0['city']}.")
 """
 
+"""
 # HW 6.7
 human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
 human_1 = {'first_name': 'bob', 'last_name': 'wilkins', 'age': 35, 'city': 'new york'}
 human_2 = {'first_name': 'christina', 'last_name': 'storn', 'age': 22, 'city': 'huston'}
 
 people = [human_0, human_1, human_2]
-for i, human in enumerate(people):
-    print(i+1)
+for human in people:
+    print(human)
     for key, val in human.items():
-        full_name = f"{val['first_name']} {val['last_name']}"
+        full_name = f"{key['first_name']} {key['last_name']}"
         print(f"\nFull name: {full_name}")
         # print(f"{k}: {v.title()}")
-
+"""
