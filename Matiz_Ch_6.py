@@ -137,7 +137,7 @@ for language in set(favorite_languages.values()):
     print(language.title())
 """
 #--------------------------------------
-
+"""
 favorite_languages = {
     'jen': ['python', 'ruby'],
     'sarah': ['c'],
@@ -151,7 +151,7 @@ for name, languages in favorite_languages.items():
         print(f"\n{name.title()}'s favorite languages are:")
     for language in languages:
         print(f"\t{language.title()}")
-
+"""
 #--------------------------------------
 """
 # HW 6.4
@@ -289,3 +289,12 @@ for human in people:
         print(f"\nFull name: {full_name}")
         # print(f"{k}: {v.title()}")
 """
+
+# HW 6.10
+friends = {'alex': [6], 'martin': [8, 10], 'regina': [12], 'phill': [3, 5, 7], 'antony': [2, 4, 8]}
+for key, values in friends.items():
+    if len(values) < 2:
+        # print(' '.join(map(str, values)))
+        print(f"My friend {key.title()} likes the number: {''.join(map(str, values))}")
+    else:
+        print(f"My friend {key.title()} likes the numbers: {', '.join(map(str, values))}")
