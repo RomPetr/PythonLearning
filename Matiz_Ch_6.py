@@ -290,6 +290,7 @@ for human in people:
         # print(f"{k}: {v.title()}")
 """
 
+"""
 # HW 6.10
 friends = {'alex': [6], 'martin': [8, 10], 'regina': [12], 'phill': [3, 5, 7], 'antony': [2, 4, 8]}
 for key, values in friends.items():
@@ -298,3 +299,10 @@ for key, values in friends.items():
         print(f"My friend {key.title()} likes the number: {''.join(map(str, values))}")
     else:
         print(f"My friend {key.title()} likes the numbers: {', '.join(map(str, values))}")
+"""
+
+# вывод чисел в одну строку без [] скобок
+a = [1, 2, 3, 4, 5]
+# Iterate over each element of list
+for val in a:
+    print(val, end=' ')
