@@ -27,6 +27,19 @@ for sandwich in sandwich_orders:
 print(f"I made the following few sandwiches: {', '.join(finished_sandwiches)}")
 """
 # --------------------------------------
+# HW 7.9
+sandwich_orders = ['BLT', 'Pastrami', 'Grilled Cheese', 'Philly Cheesesteak',
+                   'pastrami', 'Reuben', 'Club Sandwich', 'PASTRAMI']
+finished_sandwiches = []
+print("Sorry, we're out of Pastrami sandwich")
+for idx_sandwich in range(len(sandwich_orders)):
+    if 'pastrami' in sandwich_orders[idx_sandwich].lower():
+        continue
+    else:
+        print(f'I made your "{sandwich_orders[idx_sandwich]}" sandwich')
+        finished_sandwiches.append(sandwich_orders[idx_sandwich])
+print(f"I made the following few sandwiches: {', '.join(finished_sandwiches)}")
+
 
 """
 pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
