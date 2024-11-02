@@ -18,6 +18,17 @@ else:
 """
 # --------------------------------------
 """
+# HW 7.8
+sandwich_orders = ['BLT', 'Grilled Cheese', 'Philly Cheesesteak', 'Reuben', 'Club Sandwich']
+finished_sandwiches = []
+for sandwich in sandwich_orders:
+    print(f'I made your "{sandwich}" sandwich')
+    finished_sandwiches.append(sandwich)
+print(f"I made the following few sandwiches: {', '.join(finished_sandwiches)}")
+"""
+# --------------------------------------
+
+"""
 pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
 print(*pets)
 while 'cat' in pets:
