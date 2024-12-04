@@ -12,14 +12,15 @@ print(age)
 Напишите программу, которая спрашивает у пользователя, на сколько мест он хочет забронировать
 стол в ресторане. Если введенное число больше 8, выведите сообщение о том, что пользователю придется
 подождать. В противном случае сообщите, что стол готов.
-"""
+
 prompt = "How many seats would you like to reserve a table for? \n"
 seats = int(input(prompt))
 if seats > 8:
     print("Sorry, you'll have to wait a bit")
 else:
     print("Okay, your table is reserved.")
-
+"""
+# --------------------------------------
 """
 # HW 7.3
 num = input("Please, enter some number: ")
@@ -30,6 +31,67 @@ else:
     print(f"This number: {num} is not a multiple of 10")
 """
 # --------------------------------------
+"""
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    if message != 'quit':
+        print(message)
+"""
+# -------------------------------------
+"""
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+active = True
+while active:
+    message = input(prompt)
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+"""
+# -------------------------------------
+"""
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+    if city == 'quit':
+        break
+    else:
+        print(f"I'd love to go to {city.title()}!")
+"""
+# -------------------------------------
+"""
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)
+"""
+# -------------------------------------
+# HW 7.6
+prompt = "\nHow old are you?"
+prompt += "\nFor ending the program, please enter 'quit' "
+
+active = True
+while active:
+    age = input(prompt)
+    if age == 'quit':
+        break
+    age = int(age)
+    if age < 3:
+        print("The movie ticket is free for you.")
+    elif age <= 12:
+        print("For you, a movie ticket costs $10.")
+    else:
+        print("For you, a movie ticket costs $15.")
+
+# -------------------------------------
 """
 # HW 7.8
 sandwich_orders = ['BLT', 'Grilled Cheese', 'Philly Cheesesteak', 'Reuben', 'Club Sandwich']
