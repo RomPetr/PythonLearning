@@ -75,6 +75,7 @@ while True:
     print(f"\nHello, {formatted_name}!")
 """
 # -------------------------------------
+"""
 # HW 8.7
 def make_album(performer, album, tracks=None):
     get_album = {'performer': performer, 'album': album}
@@ -86,3 +87,33 @@ give_my_favorite_album = make_album('Drake', 'Take Care', 17)
 print(give_my_favorite_album)
 give_my_favorite_album = make_album('BTS', 'Map of the Soul')
 print(give_my_favorite_album)
+"""
+# -------------------------------------
+# Передача списка в функцию
+"""
+def greet_users(names):
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+"""
+# -------------------------------------
+# Изменение списка в функции
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printing model: {current_design}")
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
+
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
