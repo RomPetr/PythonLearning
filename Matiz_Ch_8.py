@@ -120,6 +120,7 @@ print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
 """
 # -------------------------------------
+"""
 # HW 8.9
 def show_message(messages):
     for message in messages:
@@ -127,3 +128,19 @@ def show_message(messages):
 
 msg = ['stop it', 'attention!', 'warning']
 show_message(msg)
+"""
+# -------------------------------------
+
+# HW 8.10
+def send_messages(messages, sent_messages):
+    while messages:
+        a = messages.pop()
+        print(a.capitalize())
+        sent_messages.append(a)
+
+
+msg = ['stop it', 'attention!', 'warning']
+sent_messages = []
+send_messages(msg[:], sent_messages) # отправляем копию msg в функцию
+print(msg)
+print(sent_messages)
