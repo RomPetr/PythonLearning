@@ -130,7 +130,7 @@ msg = ['stop it', 'attention!', 'warning']
 show_message(msg)
 """
 # -------------------------------------
-
+"""
 # HW 8.10
 def send_messages(messages, sent_messages):
     while messages:
@@ -144,3 +144,36 @@ sent_messages = []
 send_messages(msg[:], sent_messages) # отправляем копию msg в функцию
 print(msg)
 print(sent_messages)
+"""
+# -------------------------------------
+"""
+# Передача произвольного набора аргументов
+def make_pizza(*toppings):
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+"""
+# -------------------------------------
+"""
+# Позиционные аргументы с произвольным набором аргументов
+def make_pizza(size, *toppings):
+    print(f"\nMaking a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green pepper', 'extra cheese')
+"""
+# -------------------------------------
+# Использование произвольного набора именованных аргументов
+def build_profile(first, last, **user_info):
+    '''Строит словарь с информацией о пользователе'''
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('albert', 'einstein', location='princenton', field='physics')
+print(user_profile)
