@@ -100,6 +100,7 @@ usernames = ['hannah', 'ty', 'margot']
 greet_users(usernames)
 """
 # -------------------------------------
+"""
 # Изменение списка в функции
 def print_models(unprinted_designs, completed_models):
     while unprinted_designs:
@@ -117,3 +118,12 @@ completed_models = []
 
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+"""
+# -------------------------------------
+# HW 8.9
+def show_message(messages):
+    for message in messages:
+        print(message.capitalize())
+
+msg = ['stop it', 'attention!', 'warning']
+show_message(msg)
