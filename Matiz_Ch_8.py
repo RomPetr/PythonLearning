@@ -168,6 +168,7 @@ make_pizza(16, 'pepperoni')
 make_pizza(12, 'mushrooms', 'green pepper', 'extra cheese')
 """
 # -------------------------------------
+"""
 # Использование произвольного набора именованных аргументов
 def build_profile(first, last, **user_info):
     '''Строит словарь с информацией о пользователе'''
@@ -177,3 +178,23 @@ def build_profile(first, last, **user_info):
 
 user_profile = build_profile('albert', 'einstein', location='princenton', field='physics')
 print(user_profile)
+"""
+# -------------------------------------
+"""
+# HW 8.12
+def make_sandvich(*components):
+    print("\nMaking a sandvich with the following components:")
+    for component in components:
+        print(f"- {component}")
+
+make_sandvich('lettuce leaves', 'cheesee', 'slice of sausage')
+"""
+# -------------------------------------
+# HW 8.14
+def make_car(car_manufacturer, car_model, **car_totals):
+    car_totals['car_manufacturer'] = car_manufacturer
+    car_totals['car_model'] = car_model
+    return car_totals
+
+car = make_car('subaru', 'forester', color='red', tow_package=True)
+print(car)
