@@ -1,3 +1,4 @@
+"""
 class Dog():
     '''Простая модель собаки.'''
 
@@ -24,3 +25,24 @@ my_dog.sit()
 print(f"Your dog's name is {your_dog.name}.")
 print(f"Your dog is {your_dog.age} years old.")
 your_dog.sit()
+"""
+# -------------------------------------
+# HW 9.1
+class Restaurant():
+
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"The name of restaurant is '{self.restaurant_name}'")
+        print(f"The cuisine of this restaurant is {self.cuisine_type}\n")
+
+    def open_restaurant(self):
+        print(f"I would like to inform you that the restaurant "
+              f"'{self.restaurant_name}' is open for visiting from 14-00 to 02-00")
+
+
+my_restaurant = Restaurant('WilliWonka', 'American')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
