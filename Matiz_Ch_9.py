@@ -27,7 +27,7 @@ print(f"Your dog is {your_dog.age} years old.")
 your_dog.sit()
 """
 # -------------------------------------
-
+"""
 # HW 9.1
 class Restaurant():
 
@@ -43,10 +43,12 @@ class Restaurant():
         print(f"I would like to inform you that the restaurant "
               f"'{self.restaurant_name}' is open for visiting from 14-00 to 02-00")
 
-"""
+
 my_restaurant = Restaurant('WilliWonka', 'American')
 my_restaurant.describe_restaurant()
 my_restaurant.open_restaurant()
+"""
+# -------------------------------------
 """
 # HW 9.2
 first_restaurant = Restaurant('Oglu', 'Buratian')
@@ -56,3 +58,33 @@ third_restaurant = Restaurant('Pablo', 'Mexican')
 first_restaurant.describe_restaurant()
 second_restaurant.describe_restaurant()
 third_restaurant.describe_restaurant()
+"""
+# -------------------------------------
+# HW 9.3
+class User():
+
+    def __init__(self, first_name, last_name, age, gender, occupation):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.gender = gender
+        self.occupatin = occupation
+
+    def describe_user(self):
+        print(f"User info:")
+        print(f"First name: {self.first_name}")
+        print(f"Last name: {self.last_name}")
+        print(f"Age: {self.age}")
+        print(f"Gender: {self.gender}")
+        print(f"Occupation: {self.occupatin}")
+
+    def greet_user(self):
+        print(f"Welcome {self.first_name} on our portal 'BoostIT'!\n")
+
+first_user = User('Marie', 'Dubua', 19, 'Female', 'Artist')
+second_user = User('Poll', 'Achkins', 30, 'Male', 'Engineer')
+first_user.describe_user()
+first_user.greet_user()
+second_user.describe_user()
+second_user.greet_user()
+
