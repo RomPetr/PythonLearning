@@ -27,6 +27,7 @@ print(f"Your dog is {your_dog.age} years old.")
 your_dog.sit()
 """
 # -------------------------------------
+
 # HW 9.1
 class Restaurant():
 
@@ -42,7 +43,16 @@ class Restaurant():
         print(f"I would like to inform you that the restaurant "
               f"'{self.restaurant_name}' is open for visiting from 14-00 to 02-00")
 
-
+"""
 my_restaurant = Restaurant('WilliWonka', 'American')
 my_restaurant.describe_restaurant()
 my_restaurant.open_restaurant()
+"""
+# HW 9.2
+first_restaurant = Restaurant('Oglu', 'Buratian')
+second_restaurant = Restaurant('ChiShu', 'Chinese')
+third_restaurant = Restaurant('Pablo', 'Mexican')
+
+first_restaurant.describe_restaurant()
+second_restaurant.describe_restaurant()
+third_restaurant.describe_restaurant()
