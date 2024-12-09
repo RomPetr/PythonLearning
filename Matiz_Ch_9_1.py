@@ -54,6 +54,7 @@ my_used_car.increment_odometer(100)
 my_used_car.read_odometer()
 """
 # -------------------------------------
+"""
 # HW 9.4
 class Restaurant():
 
@@ -85,3 +86,45 @@ restaurant.set_number_served(23)
 print(restaurant.number_served)
 restaurant.increment_number_served(30)
 print(restaurant.number_served)
+"""
+# -------------------------------------
+# HW 9.5
+class User():
+
+    def __init__(self, first_name, last_name, age, gender, occupation):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.gender = gender
+        self.occupatin = occupation
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"User info:")
+        print(f"First name: {self.first_name}")
+        print(f"Last name: {self.last_name}")
+        print(f"Age: {self.age}")
+        print(f"Gender: {self.gender}")
+        print(f"Occupation: {self.occupatin}")
+
+    def greet_user(self):
+        print(f"Welcome {self.first_name} on our portal 'BoostIT'!\n")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+    def print_login_attempts(self):
+        print(f"For user {self.first_name} {self.last_name} login attempts = {self.login_attempts}")
+
+first_user = User('Marie', 'Dubua', 19, 'Female', 'Artist')
+first_user.print_login_attempts()
+first_user.increment_login_attempts()
+first_user.print_login_attempts()
+first_user.increment_login_attempts()
+first_user.increment_login_attempts()
+first_user.print_login_attempts()
+first_user.reset_login_attempts()
+first_user.print_login_attempts()
