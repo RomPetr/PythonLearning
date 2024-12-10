@@ -31,7 +31,7 @@ ice_cream.describe_restaurant()
 ice_cream.get_flavors_types()
 """
 # -------------------------------------
-"""
+
 # HW 9.7
 class User():
 
@@ -56,7 +56,7 @@ class User():
     def greet_admin(self):
         print(f"Hello again, {self.first_name} {self.last_name}, my dear administrator!")
 
-
+"""
 class Admin(User):
 
     def __init__(self, first_name, last_name, age, gender, occupation):
@@ -78,3 +78,29 @@ admin = Admin('Joe', 'Spencer', '45', 'male', 'Administrator')
 admin.greet_admin()
 admin.show_privileges()
 """
+# -------------------------------------
+# HW 9.8
+class Privileges():
+    def __init__(self):
+        self.occupation = 'admin'
+        self.privileges = [
+            'разрешено добавлять сообщения',
+            'разрешено удалять сообщения',
+            'разрешено удалять пользователей',
+            'разрешено добавлять пользователей',
+            'разрешено банить пользователей', ]
+
+    def show_privileges(self):
+        print(f"This is a next privileges for {self.occupation}:")
+        for privilege in self.privileges:
+            print({privilege})
+
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, gender, occupation):
+        super().__init__(first_name, last_name, age, gender, occupation)
+        self.privileges = Privileges()
+
+admin = Admin('Joe', 'Spencer', '45', 'male', 'Administrator')
+admin.greet_admin()
+admin.privileges.show_privileges()
