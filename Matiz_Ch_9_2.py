@@ -75,6 +75,11 @@ class Battery():
 
         print(f"This car can go about {range} miles on a full charge.")
 
+    # HW 9.9
+    def upgrade_battery(self):
+        if self.battery_size < 100:
+            self.battery_size = 100
+
 
 class ElectricCar(Car):
     ''' Представляет аспекты машины, спецефические для электромобилей '''
@@ -94,5 +99,11 @@ class ElectricCar(Car):
 my_battery = Battery(90)
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+
+# HW 9.9
+print('\n')
+my_tesla.battery.upgrade_battery()
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
