@@ -30,7 +30,7 @@ for i in range(4):
 str = str(win_ticket)
 
 print(f"A ticket containing this combination {' '.join(win_ticket)} is a winner.")
-
+# HW 9.15
 while True:
     counter += 1
     for i in range(4):
