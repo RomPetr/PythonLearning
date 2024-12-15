@@ -34,6 +34,7 @@ else:
         print(f"Summ of {n1} and {n2} is {n1+n2}")
 """
 # -------------------------------------
+"""
 # HW 10.7
 while(True):
     n1 = input("Enter the first number (for quit, enter 'q'): ")
@@ -51,3 +52,21 @@ while(True):
             print("This is not number!")
         else:
             print(f"Summ of {n1} and {n2} is {n1+n2}")
+"""
+# -------------------------------------
+# HW 10.8, 10.9
+def read_pets_name(filename):
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        pass
+        # print(f"Sorry, the file {filename} does not exist.")
+    else:
+        # Вывод кличек животных
+        # names = contents.split()
+        print(contents.title())
+
+filenames = ['cats.txt', 'dogs.txt']
+for filename in filenames:
+    read_pets_name(filename)
