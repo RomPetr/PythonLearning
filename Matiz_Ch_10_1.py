@@ -56,5 +56,6 @@ except FileNotFoundError:
 else:
     # Подсчет приблизительного количества слов в файле.
     words = contents.split()
+    # print(words)
     num_words = len(words)
     print(f"The file {filename} has about {num_words} words.")

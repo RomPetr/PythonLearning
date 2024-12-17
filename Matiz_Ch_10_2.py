@@ -54,6 +54,7 @@ while(True):
             print(f"Summ of {n1} and {n2} is {n1+n2}")
 """
 # -------------------------------------
+"""
 # HW 10.8, 10.9
 def read_pets_name(filename):
     try:
@@ -70,3 +71,16 @@ def read_pets_name(filename):
 filenames = ['cats.txt', 'dogs.txt']
 for filename in filenames:
     read_pets_name(filename)
+"""
+# -------------------------------------
+# HW 10.10
+filename = 'little_women.txt'
+try:
+    with open(filename, encoding='utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print(f"Sorry, the file {filename} does not exist.")
+else:
+    # Подсчет приблизительного количества слова 'the' в файле.
+    numbers = contents.lower().count('the ')
+    print(f"The average number of word 'the' is {numbers}")
