@@ -26,6 +26,7 @@ print(f"The alien is now {alien_0['color']}.")
 """
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
 print(f"Original x position: {alien_0['x_position']}")
+alien_0['speed'] = 'fast'
 # Пришелец перемещается вправо
 if alien_0['speed'] == 'slow':
     x_increment = 1
@@ -40,20 +41,44 @@ print(f"New position: {alien_0['x_position']}")
 """
 
 """
+# Удаление пары ключ-значение
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+del alien_0['points']
+print(alien_0)
+"""
+
+"""
+# Словарь с однотипными объектами
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+language = favorite_languages['sarah'].title()
+print(f"Sarah's favorite language is {language}")
+"""
+
+"""
+# использование метода get() если нет искомого ключа в словаре
+alien_0 = {'color': 'green', 'speed': 'slow'}
+# print(alien_0['points'])
+point_value = alien_0.get('points', 'No points value assigned.')
+print(point_value)
+"""
+
+"""
 alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
 for k in alien_0.keys():
     key = k
-    # print(key)
+    print(key)
 point = alien_0.pop('points')
 print(f"Popped key is '{key}' == {point}")
-# del alien_0['points']
+# del alien_0['color']
 print(alien_0)
-
-# использование метода get() если нет искомого ключа в словаре
-alien_0 = {'color': 'green', 'speed': 'slow'}
-point_value = alien_0.get('points', 'No points value assigned.')
-print(point_value)
 """
 # --------------------------------------
 """
@@ -94,7 +119,7 @@ print(f"{gollosary['deep_learning']}\n")
 """
 # --------------------------------------
 """
-# Перебор словваря
+# Перебор словаря
 user_0 = {
     'username': 'efermi',
     'first': 'enrico',
@@ -124,7 +149,44 @@ for name in favorite_languages.keys():
 """
 
 """
-# Извлечение только неповторяющихся значений из словаря
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+if 'erin' not in favorite_languages.keys():
+    print("Erin, please take our poll!")
+print(favorite_languages.keys())
+"""
+# -------------------------------------
+"""
+# Перебор ключей словаря в определенном порядке (функция sorted())
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, thank you for taking the poll.")
+"""
+# -------------------------------------
+"""
+# Перебор всех значений в словаре (метод values())
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+print("The following languages have been mentioned:")
+for langusge in favorite_languages.values():
+    print(langusge.title())
+"""
+
+"""
+# Извлечение только неповторяющихся значений из словаря через множество set()
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -136,7 +198,7 @@ print("The following languages have bee mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
 """
-#--------------------------------------
+# -------------------------------------
 """
 favorite_languages = {
     'jen': ['python', 'ruby'],
@@ -152,7 +214,7 @@ for name, languages in favorite_languages.items():
     for language in languages:
         print(f"\t{language.title()}")
 """
-#--------------------------------------
+# -------------------------------------
 """
 # HW 6.4
 gollosary = {'concatination': 'Конкатенация строк — это операция соединения двух или более строк в одну.',
@@ -196,6 +258,8 @@ aliens = []
 for alien_number in range(30):
     new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
     aliens.append(new_alien)
+# print(aliens)
+# print(f"Total number of alienss: {len(aliens)}")
 
 # Изменение характеристик первых трех пришельцев
 for alien in aliens[0:3]:
@@ -212,7 +276,7 @@ print("...")
 # Вывод количества созданных пришельцев
 print(f"Total number of aliens: {len(aliens)}.")
 """
-#--------------------------------------
+# --------------------------------------
 """
 # Список в словаре
 # Сохранение информации о заказанной пицце
@@ -226,7 +290,7 @@ print(f"You ordered a {pizza['crust']}-crust pizza "
 for topping in pizza['toppings']:
     print("\t" + topping)
 """
-
+# -------------------------------------
 """
 # Любимые языки программирования
 favorite_languages = {
@@ -243,7 +307,7 @@ for name, languages in favorite_languages.items():
     for language in languages:
         print(f"\t{language.title()}")
 """
-
+# -------------------------------------
 """
 # Словарь в словаре
 users = {
@@ -275,20 +339,24 @@ print(f"His age is {human_0['age']}.")
 print(f"And he lives in {human_0['city']}.")
 """
 
-"""
+
 # HW 6.7
-human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': '30', 'city': 'Denver'}
+human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': 30, 'city': 'Denver'}
 human_1 = {'first_name': 'bob', 'last_name': 'wilkins', 'age': 35, 'city': 'new york'}
 human_2 = {'first_name': 'christina', 'last_name': 'storn', 'age': 22, 'city': 'huston'}
 
 people = [human_0, human_1, human_2]
 for human in people:
-    print(human)
+    # print(human)
+    print("--------------------")
     for key, val in human.items():
-        full_name = f"{key['first_name']} {key['last_name']}"
-        print(f"\nFull name: {full_name}")
-        # print(f"{k}: {v.title()}")
-"""
+        if type(val) == int:
+            val = str(val)
+        print(f"{key}: {val.title()}")
+        # full_name = f"{key['first_name']} {key['last_name']}"
+        # print(f"\nFull name: {full_name}")
+        # print(f"{key}: {val}")
+
 
 """
 # HW 6.10
@@ -301,8 +369,10 @@ for key, values in friends.items():
         print(f"My friend {key.title()} likes the numbers: {', '.join(map(str, values))}")
 """
 
+"""
 # вывод чисел в одну строку без [] скобок
 a = [1, 2, 3, 4, 5]
 # Iterate over each element of list
 for val in a:
     print(val, end=' ')
+"""

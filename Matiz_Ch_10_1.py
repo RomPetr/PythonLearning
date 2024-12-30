@@ -47,6 +47,7 @@ while(True):
         print(answer)
 """
 # -------------------------------------
+"""
 filename = 'alice.txt'
 try:
     with open(filename, encoding='utf-8') as f:
@@ -59,3 +60,4 @@ else:
     # print(words)
     num_words = len(words)
     print(f"The file {filename} has about {num_words} words.")
+"""
