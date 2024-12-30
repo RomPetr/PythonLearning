@@ -339,7 +339,7 @@ print(f"His age is {human_0['age']}.")
 print(f"And he lives in {human_0['city']}.")
 """
 
-
+"""
 # HW 6.7
 human_0 = {'first_name': 'alex', 'last_name': 'corvin', 'age': 30, 'city': 'Denver'}
 human_1 = {'first_name': 'bob', 'last_name': 'wilkins', 'age': 35, 'city': 'new york'}
@@ -356,8 +356,24 @@ for human in people:
         # full_name = f"{key['first_name']} {key['last_name']}"
         # print(f"\nFull name: {full_name}")
         # print(f"{key}: {val}")
+"""
 
+# HW 6.8
+piggy = {'type': 'pig', 'name': 'piggy', 'owner': 'bob', 'gender': 'female', 'age': 3}
+lucky = {'type': 'dog', 'name': 'lucky', 'owner': 'alice', 'gender': 'male', 'age': 2}
+robby = {'type': 'hamster', 'name': 'robby', 'owner': 'rick', 'gender': 'male', 'age': 1}
+kitty = {'type': 'cat', 'name': 'kitty', 'owner': 'lusy', 'gender': 'female', 'age': 10}
+pets = [piggy, lucky, robby, kitty]
+i = 0
 
+for pet in pets:
+    print("--------------------")
+    i += 1
+    print(f"{i} pet is:")
+    for key, val in pet.items():
+        if type(val) == int:
+            val = str(val)
+        print(f"{key}: {val.title()}")
 """
 # HW 6.10
 friends = {'alex': [6], 'martin': [8, 10], 'regina': [12], 'phill': [3, 5, 7], 'antony': [2, 4, 8]}
